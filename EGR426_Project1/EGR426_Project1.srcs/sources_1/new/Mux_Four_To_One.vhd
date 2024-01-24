@@ -34,7 +34,7 @@ begin
         when "01" => seg_out <= seg2;
         when "10" => seg_out <= seg3;
         when "11" => seg_out <= seg4;
-        when others => seg_out <= "X";
+        when others => seg_out <= "XXXX";
       end case;
     end process;
 

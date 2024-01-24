@@ -16,23 +16,16 @@ end Decoder_Seven_Segment_tb;
 architecture Behavioral of Decoder_Seven_Segment_tb is
 
 ----------------------------------------------------------------------------------
-component Counter_Two_Bit
-port (
-    bcd: in std_logic_vector(3 downto 0);
-    seg_out: out std_logic_vector(7 downto 0));
-end component;
-----------------------------------------------------------------------------------
-
-
-signal bcd : std_logic_vector(3 downto 0) := "0000"; -- initialize inputs
-signal seg_out:  std_logic_vector(7 downto 0);
-
 component Decoder_Seven_Segment is
     port(
         bcd: in std_logic_vector(3 downto 0);
         seg_out: out std_logic_vector(7 downto 0));
 end component;
-  
+----------------------------------------------------------------------------------
+
+signal bcd : std_logic_vector(3 downto 0) := "0000"; -- initialize inputs
+signal seg_out:  std_logic_vector(7 downto 0);
+
 begin
     T1: Decoder_Seven_Segment port map (bcd => bcd, seg_out => seg_out); -- connect ports
  

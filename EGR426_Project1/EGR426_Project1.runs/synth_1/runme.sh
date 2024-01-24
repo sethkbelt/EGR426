@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sethkonynenbelt/EGR/EGR426_Project1/EGR426_Project1.runs/synth_1'
+HD_PWD='/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Decoder_Seven_Segment.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Decoder_Seven_Segment.tcl
+EAStep vivado -log Mux_Four_To_One.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Mux_Four_To_One.tcl

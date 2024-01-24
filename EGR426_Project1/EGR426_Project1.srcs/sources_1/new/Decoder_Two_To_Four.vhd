@@ -28,7 +28,7 @@ begin
         when "01" => anode <= "0010";
         when "10" => anode <= "0100";
         when "11" => anode <= "1000";
-        when others => anode <= "X";
+        when others => anode <= "XXXX";
       end case;
     end process;
 
