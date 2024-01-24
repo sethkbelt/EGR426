@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1706056014" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp">
-  <File Type="VDS-TIMING-PB" Name="Mux_Four_To_One_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Mux_Four_To_One_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Mux_Four_To_One.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Mux_Four_To_One_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Mux_Four_To_One_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Mux_Four_To_One_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Mux_Four_To_One.vds"/>
-  <File Type="REPORTS-TCL" Name="Mux_Four_To_One_reports.tcl"/>
-  <File Type="PA-TCL" Name="Mux_Four_To_One.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1706115543" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp">
+  <File Type="VDS-TIMING-PB" Name="Lab1_Top_Level_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Lab1_Top_Level_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Lab1_Top_Level.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Lab1_Top_Level_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Lab1_Top_Level_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Lab1_Top_Level_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Lab1_Top_Level.vds"/>
+  <File Type="REPORTS-TCL" Name="Lab1_Top_Level_reports.tcl"/>
+  <File Type="PA-TCL" Name="Lab1_Top_Level.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/Mux_Four_To_One.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Clock_Divider_OneKhz.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Counter_Two_Bit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Decoder_Seven_Segment.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -19,28 +31,18 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Decoder_Two_To_Four.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Decoder_Seven_Segment.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Mux_Four_To_One.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Clock_Divider_OneKhz.vhd">
+    <File Path="$PSRCDIR/sources_1/new/Lab1_Top_Level.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/Counter_Two_Bit.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -61,7 +63,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Mux_Four_To_One"/>
+      <Option Name="TopModule" Val="Lab1_Top_Level"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

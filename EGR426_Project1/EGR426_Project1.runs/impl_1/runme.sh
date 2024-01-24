@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.runs/synth_1'
+HD_PWD='/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Lab1_Top_Level.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab1_Top_Level.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log Lab1_Top_Level.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Lab1_Top_Level.tcl -notrace
+
+

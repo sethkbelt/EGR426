@@ -13,13 +13,15 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 ----------------------------------------------------------------------------------
 entity Lab1_Top_Level is
   port (
-    data_in_r   : in std_logic; 
-    data_in_p   : in std_logic;
-    data_in_s   : in std_logic;
+--    data_in_r   : in std_logic; 
+--    data_in_p   : in std_logic;
+--    data_in_s   : in std_logic;
+    clk_100Mhz  : in std_logic;
+    reset_main  : in std_logic;
     D0_SEG      : out std_logic_vector(7 downto 0);
-    D1_SEG      : out std_logic_vector(7 downto 0);
-    D0_AN       : out std_logic_vector(3 downto 0);
-    D1_AN       : out std_logic_vector(3 downto 0)
+    --D1_SEG      : out std_logic_vector(7 downto 0);
+    D0_AN       : out std_logic_vector(3 downto 0)
+    --D1_AN       : out std_logic_vector(3 downto 0)
     );   
 end Lab1_Top_Level;
 ----------------------------------------------------------------------------------
@@ -67,18 +69,23 @@ architecture Structural of Lab1_Top_Level is
   end component;
   ----------------------------------------------------------------------------------
   
-  signal mux_out: STD_LOGIC;
-  signal two_bit_count: STD_LOGIC_VECTOR(1:0);
+  signal mux_out              : STD_LOGIC_VECTOR (3 downto 0);
+  signal two_bit_count        : STD_LOGIC_VECTOR(1 downto 0);
+  signal display_oneHz_clock  : STD_LOGIC;
+--  data_in_r   : in std_logic; 
+--  data_in_p   : in std_logic;
+--  data_in_s   : in std_logic;
 
-  begin --using named port mapping
-    U1 : port map  (seg1, seg2, seg3, seg4, sel, seg_out);
+  begin --using named port mapping, -- module => signal
+    U1 : Mux_Four_To_One        port map (seg1 => "0001", seg2 => "0010", seg3 => "0011", seg4 => "0100", sel => two_bit_count, seg_out => mux_out);
 
-    U2 : port map (clk, reset, clk_div);
+    U2 : Clock_Divider_1Khz     port map (clk => clk_100Mhz, reset => reset_main, clk_div => display_oneHz_clock);
 
-    U3 : port map (clk_in, reset,count_out); 
+    U3 : Counter_Two_Bit        port map (clk_in => display_oneHz_clock, reset => reset_main,count_out => two_bit_count); 
     
-    U4 : port map (bcd, seg_out);
+    U4 : Decoder_Seven_Segment  port map (bcd => mux_out, seg_out => D0_SEG);
 
-    U5 : port map(sel, anode);
+    U5 : Decoder_Two_To_Four    port map (sel => two_bit_count, anode => D0_AN);
+    
 end Structural;
   
