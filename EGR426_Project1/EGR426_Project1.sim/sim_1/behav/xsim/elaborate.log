@@ -1,7 +1,7 @@
 Vivado Simulator v2023.2
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Mux_Four_To_One_tb_behav xil_defaultlib.Mux_Four_To_One_tb -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Lab1_Top_Level_tb_behav xil_defaultlib.Lab1_Top_Level_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -13,6 +13,13 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
+Compiling package ieee.std_logic_signed
 Compiling architecture behavioral of entity xil_defaultlib.Mux_Four_To_One [mux_four_to_one_default]
-Compiling architecture behavioral of entity xil_defaultlib.mux_four_to_one_tb
-Built simulation snapshot Mux_Four_To_One_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.Clock_Divider_1Khz [clock_divider_1khz_default]
+Compiling architecture behavioral of entity xil_defaultlib.Counter_Two_Bit [counter_two_bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_Seven_Segment [decoder_seven_segment_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_Two_To_Four [decoder_two_to_four_default]
+Compiling architecture behavioral of entity xil_defaultlib.rps_input [rps_input_default]
+Compiling architecture structural of entity xil_defaultlib.Lab1_Top_Level [lab1_top_level_default]
+Compiling architecture behavioral of entity xil_defaultlib.lab1_top_level_tb
+Built simulation snapshot Lab1_Top_Level_tb_behav

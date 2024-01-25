@@ -71,6 +71,8 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -94,6 +96,9 @@ read_vhdl -library xil_defaultlib {
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd
+  /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_input.vhd
+  /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_125Hz.vhd
+  /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Two_To_One.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

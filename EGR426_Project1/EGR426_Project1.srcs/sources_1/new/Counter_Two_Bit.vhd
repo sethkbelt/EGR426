@@ -25,9 +25,11 @@ architecture Behavioral of Counter_Two_Bit is
       process(clk_in, reset)
         begin
         if (reset = '1') then -- synchronous
-            count <= "00";
+          count <= "00";
         elsif (rising_edge(clk_in)) then
-            count <= count + 1; -- roll over after 11
+          count <= count + 1; -- roll over after 11
+        else
+          count <= count;
         end if;
       end process;
 

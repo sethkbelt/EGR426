@@ -31,8 +31,8 @@ begin
       case sel is
         when "00" => seg_out <= seg1;
         when "01" => seg_out <= seg2;
-        when "10" => seg_out <= seg3;
-        when "11" => seg_out <= seg4;
+--        when "10" => seg_out <= seg3;
+--        when "11" => seg_out <= seg4;
         when others => seg_out <= "X";
       end case;
     end process;

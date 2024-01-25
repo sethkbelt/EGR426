@@ -11,7 +11,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Lab1_Top_Level.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.562 ; gain = 39.836 ; free physical = 7366 ; free virtual = 13464
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.594 ; gain = 0.023 ; free physical = 6505 ; free virtual = 12912
 Command: read_checkpoint -auto_incremental -incremental /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,43 +24,46 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 79946
+INFO: [Synth 8-7075] Helper process launched with PID 101274
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2074.184 ; gain = 405.715 ; free physical = 6342 ; free virtual = 12440
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2074.184 ; gain = 405.715 ; free physical = 5461 ; free virtual = 11868
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Lab1_Top_Level' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:29]
-INFO: [Synth 8-3491] module 'Mux_Four_To_One' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd:13' bound to instance 'U1' of component 'Mux_Four_To_One' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'Lab1_Top_Level' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:27]
+INFO: [Synth 8-3491] module 'Mux_Four_To_One' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd:13' bound to instance 'U1' of component 'Mux_Four_To_One' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'Mux_Four_To_One' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd:25]
 INFO: [Synth 8-226] default block is never used [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd:32]
 INFO: [Synth 8-256] done synthesizing module 'Mux_Four_To_One' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Mux_Four_To_One.vhd:25]
-INFO: [Synth 8-3491] module 'Clock_Divider_1Khz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:13' bound to instance 'U2' of component 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:82]
+INFO: [Synth 8-3491] module 'Clock_Divider_1Khz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:13' bound to instance 'U2' of component 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:84]
 INFO: [Synth 8-638] synthesizing module 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'Clock_Divider_1Khz' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:19]
-INFO: [Synth 8-3491] module 'Counter_Two_Bit' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:13' bound to instance 'U3' of component 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:84]
+INFO: [Synth 8-3491] module 'Counter_Two_Bit' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:13' bound to instance 'U3' of component 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:86]
 INFO: [Synth 8-638] synthesizing module 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'Counter_Two_Bit' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:20]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U4' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:86]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U4' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:88]
 INFO: [Synth 8-638] synthesizing module 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:19]
 INFO: [Synth 8-226] default block is never used [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'Decoder_Seven_Segment' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:19]
-INFO: [Synth 8-3491] module 'Decoder_Two_To_Four' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd:13' bound to instance 'U5' of component 'Decoder_Two_To_Four' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:88]
+INFO: [Synth 8-3491] module 'Decoder_Two_To_Four' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd:13' bound to instance 'U5' of component 'Decoder_Two_To_Four' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:90]
 INFO: [Synth 8-638] synthesizing module 'Decoder_Two_To_Four' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd:19]
 INFO: [Synth 8-226] default block is never used [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd:26]
 INFO: [Synth 8-256] done synthesizing module 'Decoder_Two_To_Four' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Two_To_Four.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'Lab1_Top_Level' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:29]
+INFO: [Synth 8-3491] module 'rps_input' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_input.vhd:12' bound to instance 'U6' of component 'rps_input' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'rps_input' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_input.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'rps_input' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_input.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Lab1_Top_Level' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.152 ; gain = 480.684 ; free physical = 6244 ; free virtual = 12343
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2149.152 ; gain = 480.684 ; free physical = 5364 ; free virtual = 11772
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2166.965 ; gain = 498.496 ; free physical = 6241 ; free virtual = 12341
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2166.965 ; gain = 498.496 ; free physical = 5363 ; free virtual = 11771
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2166.965 ; gain = 498.496 ; free physical = 6241 ; free virtual = 12341
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2166.965 ; gain = 498.496 ; free physical = 5363 ; free virtual = 11771
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2166.965 ; gain = 0.000 ; free physical = 6241 ; free virtual = 12341
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2166.965 ; gain = 0.000 ; free physical = 5363 ; free virtual = 11771
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -71,31 +74,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Lab1_Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.699 ; gain = 0.000 ; free physical = 6233 ; free virtual = 12333
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.699 ; gain = 0.000 ; free physical = 5353 ; free virtual = 11761
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.734 ; gain = 0.000 ; free physical = 6233 ; free virtual = 12332
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.734 ; gain = 0.000 ; free physical = 5352 ; free virtual = 11760
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6229 ; free virtual = 12328
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5350 ; free virtual = 11758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6229 ; free virtual = 12328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5350 ; free virtual = 11758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6229 ; free virtual = 12328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5350 ; free virtual = 11758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6228 ; free virtual = 12328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5345 ; free virtual = 11754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -108,6 +111,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -125,25 +129,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5326 ; free virtual = 11738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -161,37 +165,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -210,37 +214,37 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |     4|
 |3     |LUT1   |     1|
-|4     |LUT2   |    10|
-|5     |LUT4   |     4|
+|4     |LUT2   |     5|
+|5     |LUT4   |    12|
 |6     |LUT5   |    18|
 |7     |FDCE   |    19|
-|8     |IBUF   |     2|
+|8     |IBUF   |     6|
 |9     |OBUF   |    12|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6213 ; free virtual = 12317
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11736
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2251.734 ; gain = 498.496 ; free physical = 6212 ; free virtual = 12316
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2251.734 ; gain = 583.266 ; free physical = 6212 ; free virtual = 12316
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2253.734 ; gain = 498.496 ; free physical = 5323 ; free virtual = 11735
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2253.734 ; gain = 585.266 ; free physical = 5323 ; free virtual = 11735
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.734 ; gain = 0.000 ; free physical = 6212 ; free virtual = 12316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.734 ; gain = 0.000 ; free physical = 5323 ; free virtual = 11735
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2251.734 ; gain = 0.000 ; free physical = 6518 ; free virtual = 12622
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2253.734 ; gain = 0.000 ; free physical = 5641 ; free virtual = 12054
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 648d30da
+Synth Design complete | Checksum: 1e3c9f9f
 INFO: [Common 17-83] Releasing license: Synthesis
-41 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+44 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 2251.734 ; gain = 909.234 ; free physical = 6518 ; free virtual = 12622
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1847.289; main = 1524.564; forked = 391.669
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3272.090; main = 2251.703; forked = 1020.387
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2275.711 ; gain = 0.000 ; free physical = 6518 ; free virtual = 12622
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2253.734 ; gain = 911.203 ; free physical = 5641 ; free virtual = 12054
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1883.415; main = 1529.645; forked = 431.396
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3274.086; main = 2253.703; forked = 1020.383
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2277.711 ; gain = 0.000 ; free physical = 5641 ; free virtual = 12054
 INFO: [Common 17-1381] The checkpoint '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.runs/synth_1/Lab1_Top_Level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Lab1_Top_Level_utilization_synth.rpt -pb Lab1_Top_Level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 24 08:59:38 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 25 05:58:02 2024...

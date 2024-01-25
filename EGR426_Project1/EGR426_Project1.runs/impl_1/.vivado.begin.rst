@@ -1,5 +1,20 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="80044" HostCore="4" HostMemory="17496548">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="91531" HostCore="4" HostMemory="17496548">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="92452" HostCore="4" HostMemory="17496548">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="98300" HostCore="4" HostMemory="17496548">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="101365" HostCore="4" HostMemory="17496548">
     </Process>
 </ProcessHandle>
