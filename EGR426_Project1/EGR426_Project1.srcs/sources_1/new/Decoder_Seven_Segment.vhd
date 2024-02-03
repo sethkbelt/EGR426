@@ -23,23 +23,23 @@ begin
     begin
       case bcd is
         -- corresponds to basys-3 segment control bits
-        when "0000" => seg_out <= "01000000";
-        when "0001" => seg_out <= "01111001";
-        when "0010" => seg_out <= "00100100";
-        when "0011" => seg_out <= "00110000";
-        when "0100" => seg_out <= "00011001";
-        when "0101" => seg_out <= "00010010";
-        when "0110" => seg_out <= "00000010";
-        when "0111" => seg_out <= "01111000";
-        when "1000" => seg_out <= "00000000";
-        when "1001" => seg_out <= "00010000";
+        when "0000" => seg_out <= "11000000";
+        when "0001" => seg_out <= "11111001";
+        when "0010" => seg_out <= "10100100";
+        when "0011" => seg_out <= "10110000";
+        when "0100" => seg_out <= "10011001";
+        when "0101" => seg_out <= "10010010";
+        when "0110" => seg_out <= "10000010";
+        when "0111" => seg_out <= "11111000";
+        when "1000" => seg_out <= "10000000";
+        when "1001" => seg_out <= "10010000";
         
-        when "1010" => seg_out <= "01001110"; -- R
-        when "1011" => seg_out <= "00001100"; -- P
-        when "1100" => seg_out <= "00010010"; -- S
-        when "1101" => seg_out <= "01000111"; -- L
-        when "1110" => seg_out <= "10000000";
-        when "1111" => seg_out <= "10111111"; -- "-"
+        when "1010" => seg_out <= "11001110"; -- R
+        when "1011" => seg_out <= "10001100"; -- P
+        when "1100" => seg_out <= "10010010"; -- S
+        when "1101" => seg_out <= "11000111"; -- L
+        when "1110" => seg_out <= "11000110"; -- C
+        when "1111" => seg_out <= "11111111"; 
         when others => seg_out <= "XXXXXXXX";
 
       end case;

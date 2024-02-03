@@ -127,6 +127,7 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3924-ubuntu/incrSyn
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
@@ -312,7 +313,7 @@ OPTRACE "read constraints: write_bitstream" END { }
   catch { write_mem_info -force -no_partial_mmi Lab1_Top_Level.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force Lab1_Top_Level.bit 
+  write_bitstream -force Lab1_Top_Level.bit -bin_file
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }

@@ -1,7 +1,0 @@
-Running: xsim.dir/rps_input_tb_behav/xsimk -simmode gui -wdb rps_input_tb_behav.wdb -simrunnum 0 -socket 56571
-Design successfully loaded
-Design Loading Memory Usage: 23820 KB (Peak: 23820 KB)
-Design Loading CPU Usage: 40 ms
-Simulation completed
-Simulation Memory Usage: 113756 KB (Peak: 163088 KB)
-Simulation CPU Usage: 4290 ms

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------
- -- Title: Clock_Divider_125Hz.vhd
+ -- Title: Clock_Divider_10Hz.vhd
  -- Author: Seth Konynenbelt
  -- Created: January 20, 2023
  -- Description: 125Hz clock divider
@@ -10,28 +10,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity Clock_Divider_125Hz is
+entity Clock_Divider_10Hz is
   port (
   clk,reset: in std_logic;
   clk_div: out std_logic);
-end Clock_Divider_125Hz;
+end Clock_Divider_10Hz;
 
-architecture Behavioral of Clock_Divider_125Hz is
+architecture Behavioral of Clock_Divider_10Hz is
 
   SIGNAL clk_temp: STD_LOGIC;
   -- 16 bit vector holds value of 2^16, greater than 50,000
-  -- 100MHZ / 100,000 = 1Khz, divided by 2 to create clock of 50000
-  SIGNAL count: STD_LOGIC_VECTOR (18 downto 0);
+  -- 100MHZ / 10,000,000 = 10Hz, divided by 2 to create clock of 5,000,000
+  SIGNAL count: STD_LOGIC_VECTOR (22 downto 0);
 
       begin
         process(clk, reset)
           begin
             if(reset = '1') then
-              count <= x"00000";
+              count <= "00000000000000000000000";
               clk_temp <= '0';
             elsif(clk'event and rising_edge(clk)) then
-              if(count = 400000) then
-                count <= x"00000";
+              if(count = 5000000) then
+                count <= "00000000000000000000000";
                 clk_temp <= not(clk_temp);
               else
                 count <= count + 1;
