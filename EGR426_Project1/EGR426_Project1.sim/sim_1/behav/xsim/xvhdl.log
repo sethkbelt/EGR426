@@ -42,3 +42,5 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Pro
 INFO: [VRFC 10-3107] analyzing entity 'debouncer_tb'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'rps_rules_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/main_rps_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'main_rps_tb'

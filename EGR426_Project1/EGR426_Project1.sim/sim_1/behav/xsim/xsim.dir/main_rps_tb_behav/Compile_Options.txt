@@ -1,0 +1,1 @@
+--debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "main_rps_tb_behav" "xil_defaultlib.main_rps_tb" -log "elaborate.log" 

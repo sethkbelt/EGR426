@@ -27,10 +27,10 @@ BEGIN
   PROCESS (clk, switch, reset_main)
   BEGIN
     IF (reset_main = '1') THEN
-      rps_temp <= "1110";
+      rps_temp <= "1010";
     ELSIF (switch = "00000") THEN -- uses switches for RPSLS input
       IF (rising_edge(clk)) THEN -- only rotate computer when no button
-        IF (rps_temp = "1110") THEN
+        IF (rps_temp = "1100") THEN --         IF (rps_temp = "1110") THEN
           rps_temp <= "1010";
         ELSE
           rps_temp <= rps_temp + 1;

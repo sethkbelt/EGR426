@@ -11,6 +11,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source Lab1_Top_Level.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1341.402 ; gain = 0.023 ; free physical = 2575 ; free virtual = 13387
 Command: read_checkpoint -auto_incremental -incremental /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/utils_1/imports/synth_1/Decoder_Seven_Segment.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -23,61 +24,61 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 103014
+INFO: [Synth 8-7075] Helper process launched with PID 144780
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2073.312 ; gain = 403.684 ; free physical = 1704 ; free virtual = 12043
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2074.086 ; gain = 405.715 ; free physical = 1520 ; free virtual = 12332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Lab1_Top_Level' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:28]
-INFO: [Synth 8-3491] module 'Clock_Divider_1Khz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:13' bound to instance 'U2' of component 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:122]
+INFO: [Synth 8-3491] module 'Clock_Divider_1Khz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:13' bound to instance 'U2' of component 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:134]
 INFO: [Synth 8-638] synthesizing module 'Clock_Divider_1Khz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'Clock_Divider_1Khz' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_OneKhz.vhd:19]
-INFO: [Synth 8-3491] module 'Clock_Divider_10Hz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_125Hz.vhd:13' bound to instance 'U3' of component 'Clock_Divider_10Hz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:123]
+INFO: [Synth 8-3491] module 'Clock_Divider_10Hz' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_125Hz.vhd:13' bound to instance 'U3' of component 'Clock_Divider_10Hz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:135]
 INFO: [Synth 8-638] synthesizing module 'Clock_Divider_10Hz' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_125Hz.vhd:19]
 INFO: [Synth 8-256] done synthesizing module 'Clock_Divider_10Hz' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Clock_Divider_125Hz.vhd:19]
-INFO: [Synth 8-3491] module 'Counter_Two_Bit' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:13' bound to instance 'U4' of component 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:124]
+INFO: [Synth 8-3491] module 'Counter_Two_Bit' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:13' bound to instance 'U4' of component 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:136]
 INFO: [Synth 8-638] synthesizing module 'Counter_Two_Bit' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:20]
 INFO: [Synth 8-256] done synthesizing module 'Counter_Two_Bit' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Counter_Two_Bit.vhd:20]
-INFO: [Synth 8-3491] module 'computer_rps' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/computer_rps.vhd:14' bound to instance 'U5' of component 'computer_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:125]
+INFO: [Synth 8-3491] module 'computer_rps' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/computer_rps.vhd:14' bound to instance 'U5' of component 'computer_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:137]
 INFO: [Synth 8-638] synthesizing module 'computer_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/computer_rps.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'computer_rps' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/computer_rps.vhd:22]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U6' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:126]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U6' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:138]
 INFO: [Synth 8-638] synthesizing module 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:19]
 INFO: [Synth 8-226] default block is never used [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'Decoder_Seven_Segment' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:19]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U7' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:127]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U8' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:128]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U9' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:129]
-INFO: [Synth 8-3491] module 'big_mux' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:13' bound to instance 'U10' of component 'big_mux' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:131]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U7' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:139]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U8' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:140]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U9' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:141]
+INFO: [Synth 8-3491] module 'big_mux' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:13' bound to instance 'U10' of component 'big_mux' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'big_mux' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:26]
 INFO: [Synth 8-256] done synthesizing module 'big_mux' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:26]
-INFO: [Synth 8-3491] module 'main_rps' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:14' bound to instance 'U11' of component 'main_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'main_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'main_rps' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:22]
-INFO: [Synth 8-3491] module 'rps_rules' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:14' bound to instance 'U12' of component 'rps_rules' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:133]
-INFO: [Synth 8-638] synthesizing module 'rps_rules' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:26]
-WARNING: [Synth 8-614] signal 'win_count_temp' is read in the process but is not in the sensitivity list [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:33]
-WARNING: [Synth 8-614] signal 'loss_count_temp' is read in the process but is not in the sensitivity list [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:33]
-WARNING: [Synth 8-614] signal 'tie_count_temp' is read in the process but is not in the sensitivity list [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'rps_rules' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:26]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U13' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:135]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U14' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:136]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U15' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:137]
-INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U16' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:138]
-INFO: [Synth 8-3491] module 'big_mux' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:13' bound to instance 'U17' of component 'big_mux' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:139]
+INFO: [Synth 8-3491] module 'main_rps' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:14' bound to instance 'U11' of component 'main_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'main_rps' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'main_rps' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd:23]
+INFO: [Synth 8-3491] module 'rps_rules' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:14' bound to instance 'U12' of component 'rps_rules' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'rps_rules' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'rps_rules' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:29]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment_AF' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:13' bound to instance 'U13' of component 'Decoder_Seven_Segment_AF' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'Decoder_Seven_Segment_AF' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:19]
+INFO: [Synth 8-226] default block is never used [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_Seven_Segment_AF' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:19]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment_AF' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:13' bound to instance 'U14' of component 'Decoder_Seven_Segment_AF' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:148]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment_AF' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd:13' bound to instance 'U15' of component 'Decoder_Seven_Segment_AF' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:149]
+INFO: [Synth 8-3491] module 'Decoder_Seven_Segment' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_Seven_Segment.vhd:13' bound to instance 'U16' of component 'Decoder_Seven_Segment' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:150]
+INFO: [Synth 8-3491] module 'big_mux' declared at '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/big_mux.vhd:13' bound to instance 'U17' of component 'big_mux' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:151]
 INFO: [Synth 8-256] done synthesizing module 'Lab1_Top_Level' (0#1) [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Lab1_Top_Level.vhd:28]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2151.250 ; gain = 481.621 ; free physical = 1615 ; free virtual = 11954
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2151.055 ; gain = 482.684 ; free physical = 1428 ; free virtual = 12241
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2169.062 ; gain = 499.434 ; free physical = 1613 ; free virtual = 11953
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2165.898 ; gain = 497.527 ; free physical = 1426 ; free virtual = 12239
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2169.062 ; gain = 499.434 ; free physical = 1613 ; free virtual = 11953
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2165.898 ; gain = 497.527 ; free physical = 1426 ; free virtual = 12239
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2169.062 ; gain = 0.000 ; free physical = 1613 ; free virtual = 11952
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2165.898 ; gain = 0.000 ; free physical = 1426 ; free virtual = 12239
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -88,36 +89,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Lab1_Top_Level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.797 ; gain = 0.000 ; free physical = 1603 ; free virtual = 11942
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.633 ; gain = 0.000 ; free physical = 1414 ; free virtual = 12227
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.832 ; gain = 0.000 ; free physical = 1602 ; free virtual = 11942
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.668 ; gain = 0.000 ; free physical = 1414 ; free virtual = 12227
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1602 ; free virtual = 11942
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1405 ; free virtual = 12218
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1602 ; free virtual = 11942
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1405 ; free virtual = 12218
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1602 ; free virtual = 11942
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1405 ; free virtual = 12218
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'led0_reg' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:39]
-WARNING: [Synth 8-327] inferring latch for variable 'led1_reg' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:38]
-WARNING: [Synth 8-327] inferring latch for variable 'win_count_temp_reg' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:40]
-WARNING: [Synth 8-327] inferring latch for variable 'tie_count_temp_reg' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:42]
-WARNING: [Synth 8-327] inferring latch for variable 'loss_count_temp_reg' [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd:41]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1602 ; free virtual = 11943
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1403 ; free virtual = 12217
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'U7' (Decoder_Seven_Segment) to 'U8'
 INFO: [Synth 8-223] decloning instance 'U7' (Decoder_Seven_Segment) to 'U9'
@@ -129,16 +125,17 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 4     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    4 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 2     
-	   7 Input    4 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
 	   5 Input    1 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -157,25 +154,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3917] design Lab1_Top_Level has port D0_SEG[7] driven by constant 1
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11928
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1379 ; free virtual = 12197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1380 ; free virtual = 12197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1378 ; free virtual = 12195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1378 ; free virtual = 12195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -193,37 +190,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -241,44 +238,44 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    10|
-|3     |LUT1   |    14|
-|4     |LUT2   |     9|
-|5     |LUT3   |     3|
-|6     |LUT4   |    23|
-|7     |LUT5   |    30|
-|8     |LUT6   |    46|
-|9     |MUXF7  |     6|
-|10    |FDCE   |    44|
-|11    |FDPE   |     3|
-|12    |LD     |    14|
-|13    |IBUF   |     7|
-|14    |OBUF   |    26|
+|3     |LUT1   |     4|
+|4     |LUT2   |    10|
+|5     |LUT3   |     5|
+|6     |LUT4   |    27|
+|7     |LUT5   |    59|
+|8     |LUT6   |    29|
+|9     |MUXF7  |     5|
+|10    |FDCE   |    59|
+|11    |FDPE   |     2|
+|12    |FDRE   |     7|
+|13    |FDSE   |     2|
+|14    |IBUF   |     7|
+|15    |OBUF   |    26|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2280.832 ; gain = 499.434 ; free physical = 1583 ; free virtual = 11927
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2280.832 ; gain = 611.203 ; free physical = 1583 ; free virtual = 11927
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2280.668 ; gain = 497.527 ; free physical = 1374 ; free virtual = 12192
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.668 ; gain = 612.297 ; free physical = 1374 ; free virtual = 12192
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.832 ; gain = 0.000 ; free physical = 1583 ; free virtual = 11927
-INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.668 ; gain = 0.000 ; free physical = 1374 ; free virtual = 12192
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.832 ; gain = 0.000 ; free physical = 1884 ; free virtual = 12228
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2280.668 ; gain = 0.000 ; free physical = 1706 ; free virtual = 12524
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 14 instances were transformed.
-  LD => LDCE: 14 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 72c7c2ca
+Synth Design complete | Checksum: 53bdc8ba
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+61 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 2280.832 ; gain = 937.141 ; free physical = 1883 ; free virtual = 12227
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1854.664; main = 1534.590; forked = 395.110
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3301.188; main = 2280.801; forked = 1020.387
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2304.809 ; gain = 0.000 ; free physical = 1883 ; free virtual = 12227
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 2280.668 ; gain = 936.297 ; free physical = 1706 ; free virtual = 12524
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1889.154; main = 1528.756; forked = 432.165
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3301.023; main = 2280.637; forked = 1020.387
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2304.645 ; gain = 0.000 ; free physical = 1706 ; free virtual = 12524
 INFO: [Common 17-1381] The checkpoint '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.runs/synth_1/Lab1_Top_Level.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Lab1_Top_Level_utilization_synth.rpt -pb Lab1_Top_Level_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb  2 20:45:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  4 12:08:05 2024...

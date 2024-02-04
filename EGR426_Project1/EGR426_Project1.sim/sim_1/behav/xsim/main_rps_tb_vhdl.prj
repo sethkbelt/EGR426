@@ -22,6 +22,7 @@ vhdl xil_defaultlib  \
 "../../../../EGR426_Project1.srcs/sim_1/new/Counter_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/debouncer_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd" \
+"../../../../EGR426_Project1.srcs/sim_1/new/main_rps_tb.vhd" \
 
 # Do not sort compile order
 nosort

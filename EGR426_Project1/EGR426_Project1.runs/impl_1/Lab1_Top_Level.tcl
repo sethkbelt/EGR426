@@ -127,7 +127,7 @@ set rc [catch {
   set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3924-ubuntu/incrSyn
+  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-124154-ubuntu/incrSyn
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1

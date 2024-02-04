@@ -1,0 +1,29 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.sim/sim_1/synth/func/xsim/main_rps_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Clock_Divider_10Hz'
+INFO: [VRFC 10-3107] analyzing entity 'Clock_Divider_1Khz'
+INFO: [VRFC 10-3107] analyzing entity 'Counter_Two_Bit'
+INFO: [VRFC 10-3107] analyzing entity 'computer_rps'
+INFO: [VRFC 10-3107] analyzing entity 'main_rps'
+INFO: [VRFC 10-3107] analyzing entity 'rps_rules'
+INFO: [VRFC 10-3107] analyzing entity 'Lab1_Top_Level'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Lab1_Top_Level_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Lab1_Top_Level_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_input_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'computer_rps_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Mux_Four_To_One_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mux_Four_To_One_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Decoder_Seven_Segment_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_Seven_Segment_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Decoder_Two_To_Four_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decoder_Two_To_Four_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Clock_Divider_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Clock_Divider_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/Counter_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Counter_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/debouncer_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debouncer_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rps_rules_tb'
+ERROR: [VRFC 10-3353] formal port 'clk' has no actual or default value [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd:46]
+ERROR: [VRFC 10-9458] unit 'behavioral' is ignored due to previous errors [/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd:16]
+INFO: [VRFC 10-8704] VHDL file '/home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd' is ignored due to errors

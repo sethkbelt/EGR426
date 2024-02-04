@@ -55,6 +55,13 @@ END Lab1_Top_Level;
       bcd : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       seg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
   END COMPONENT;
+    ----------------------------------------------------------------------------------
+
+    COMPONENT Decoder_Seven_Segment_AF IS
+    PORT (
+      bcd : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      seg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+  END COMPONENT;
   ----------------------------------------------------------------------------------
   COMPONENT computer_rps IS
     PORT (
@@ -78,21 +85,25 @@ END Lab1_Top_Level;
    ----------------------------------------------------------------------------------
   COMPONENT main_rps IS
     PORT ( 
-        reset_main : IN STD_LOGIC;
+        clk, reset_main : IN STD_LOGIC;
         switch : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+                switch_flag : OUT STD_LOGIC;
         user_rps : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
       );
   END COMPONENT;
   ----------------------------------------------------------------------------------
   COMPONENT rps_rules IS
     PORT (
-      user_rps : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      comp_rps : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      led0 : OUT STD_LOGIC;
-      led1 : OUT STD_LOGIC;
-      win_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      tie_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      loss_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+        clk, reset : IN STD_LOGIC;
+        user_rps : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        comp_rps : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        --switch : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        switch_flag : IN STD_LOGIC;
+        led0 : OUT STD_LOGIC;
+        led1 : OUT STD_LOGIC;
+        win_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+        tie_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+        loss_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT;
 
@@ -116,6 +127,7 @@ END Lab1_Top_Level;
   SIGNAL win_count : STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL tie_count : STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL loss_count : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  SIGNAL switch_flag : STD_LOGIC;
 
 BEGIN --using named port mapping, -- module => signal (top level)
 
@@ -129,12 +141,12 @@ BEGIN --using named port mapping, -- module => signal (top level)
   U9 : Decoder_Seven_Segment PORT MAP(bcd => "1111", seg_out => d0_segment_signal4);
  
   U10 : big_mux PORT MAP(seg1 => d0_segment_signal1, seg2 => d0_segment_signal2, seg3 => d0_segment_signal3, seg4 => d0_segment_signal4, sel => two_bit_count, seg_out => D0_SEG, anode_out => D0_AN);
-  U11 : main_rps PORT MAP( reset_main => reset_main, switch => sw, user_rps => user_rps);
-  U12 : rps_rules PORT MAP(user_rps => user_rps, comp_rps => comp_rps, led0 => led(0), led1 => led(1), win_count => win_count, tie_count => tie_count, loss_count => loss_count);
+  U11 : main_rps PORT MAP(clk => clk_100Mhz, reset_main => reset_main, switch => sw, switch_flag => switch_flag, user_rps => user_rps);
+  U12 : rps_rules PORT MAP(reset => reset_main, clk => clk_100Mhz, user_rps => user_rps, comp_rps => comp_rps, switch_flag => switch_flag, led0 => led(0), led1 => led(1), win_count => win_count, tie_count => tie_count, loss_count => loss_count);
 
-  U13 : Decoder_Seven_Segment PORT MAP(bcd => win_count, seg_out => d1_segment_signal1);
-  U14 : Decoder_Seven_Segment PORT MAP(bcd => tie_count, seg_out => d1_segment_signal2);
-  U15 : Decoder_Seven_Segment PORT MAP(bcd => loss_count, seg_out => d1_segment_signal3);
+  U13 : Decoder_Seven_Segment_AF PORT MAP(bcd => win_count, seg_out => d1_segment_signal1);
+  U14 : Decoder_Seven_Segment_AF PORT MAP(bcd => tie_count, seg_out => d1_segment_signal2);
+  U15 : Decoder_Seven_Segment_AF PORT MAP(bcd => loss_count, seg_out => d1_segment_signal3);
   U16 : Decoder_Seven_Segment PORT MAP(bcd => user_rps, seg_out => d1_segment_signal4);
   U17 : big_mux PORT MAP(seg1 => d1_segment_signal1, seg2 => d1_segment_signal2, seg3 => d1_segment_signal3, seg4 => d1_segment_signal4, sel => two_bit_count, seg_out => D1_SEG, anode_out => D1_AN);
 

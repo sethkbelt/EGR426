@@ -13,28 +13,42 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 ----------------------------------------------------------------------------------
 ENTITY main_rps IS
     PORT (
-        reset_main : IN STD_LOGIC;
+        clk, reset_main : IN STD_LOGIC;
         switch : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        switch_flag : OUT STD_LOGIC;
         user_rps : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END main_rps;
 ----------------------------------------------------------------------------------
 
 ARCHITECTURE Behavioral OF main_rps IS
 
+SIGNAL switch_previous : STD_LOGIC_VECTOR (4 downto 0);
+
 BEGIN
-    PROCESS (switch, reset_main)
+    PROCESS (clk, switch, reset_main, switch_previous)
     BEGIN
+     if(rising_edge(clk)) THEN
         IF (reset_main = '1') THEN
             user_rps <= "1110";
+            switch_flag <= '0';
         ELSE
+            if (switch /= switch_previous and switch /= "00000") THEN
+            switch_flag <= '1';
+            else 
+            switch_flag <= '0';
+            end if;
             CASE switch IS
                 WHEN "00001" => user_rps <= "1010"; -- Rock choice
                 WHEN "00010" => user_rps <= "1011"; -- Paper choice
                 WHEN "00100" => user_rps <= "1100"; -- Scissors choice
                 WHEN "01000" => user_rps <= "1101"; -- Lizard choice
                 WHEN "10000" => user_rps <= "1110"; -- Spock choice
-                WHEN OTHERS => user_rps <= "1111"; -- off
+                WHEN OTHERS => 
+                    user_rps <= "1111"; -- off
             END CASE;
+        END IF;
+              switch_previous <= switch;
+
         END IF;
       END PROCESS;
     END Behavioral;

@@ -1,55 +1,45 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="19530" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="127255" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="46710" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="129041" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="48380" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="129701" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="49642" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="131679" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="74533" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="133086" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="75552" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="138043" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="94956" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="139303" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="97136" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="142412" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="97660" HostCore="4" HostMemory="17496556">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="98365" HostCore="4" HostMemory="17496556">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="103125" HostCore="4" HostMemory="17496556">
+    <Process Command="vivado" Owner="sethkonynenbelt" Host="ubuntu" Pid="144974" HostCore="4" HostMemory="17496556">
     </Process>
 </ProcessHandle>

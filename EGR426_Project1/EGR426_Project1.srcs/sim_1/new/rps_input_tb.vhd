@@ -32,7 +32,7 @@ signal keeper_val        :   std_logic_vector(4 downto 0) := "00001"; -- initial
 begin
     T1: computer_rps port map (clk => clk, reset_main => reset, switch => switch, rps => rps); -- connect ports
  
-  process         -- clock process for clk
+  process         
     begin
       wait for 100 ns;    -- hold reset STATE for 100 ns
       reset <= '1';

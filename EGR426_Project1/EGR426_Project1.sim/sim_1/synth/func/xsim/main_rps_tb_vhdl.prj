@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"main_rps_tb_func_synth.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Lab1_Top_Level_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/rps_input_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Mux_Four_To_One_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Decoder_Seven_Segment_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Decoder_Two_To_Four_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Clock_Divider_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/Counter_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/debouncer_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd" \
+"../../../../../EGR426_Project1.srcs/sim_1/new/main_rps_tb.vhd" \
+
+# Do not sort compile order
+nosort
