@@ -1,38 +1,40 @@
 ----------------------------------------------------------------------------------
- -- Title: Counter_Two_bit.vhd
- -- Author: Seth Konynenbelt
- -- Created: January 20, 2023
- -- Description: Two bit counter
+-- Title: Counter_Two_bit.vhd
+-- Author: Seth Konynenbelt
+-- Created: January 20, 2023
+-- Description: Two bit counter
 ----------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity Counter_Two_Bit is
-    port (
-      clk_in: in std_logic; 
-      reset: in std_logic;
-      count_out: out std_logic_vector(1 downto 0));
-end Counter_Two_Bit;
+----------------------------------------------------------------------------------
+ENTITY Counter_Two_Bit IS
+  PORT (
+    clk_in : IN STD_LOGIC;
+    reset : IN STD_LOGIC;
+    count_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0));
+END Counter_Two_Bit;
+----------------------------------------------------------------------------------
 
-architecture Behavioral of Counter_Two_Bit is
-  
-  SIGNAL count: STD_LOGIC_VECTOR (1 downto 0);
+ARCHITECTURE Behavioral OF Counter_Two_Bit IS
 
-  begin
-      process(clk_in, reset)
-        begin
-        if (reset = '1') then -- synchronous
-          count <= "00";
-        elsif (rising_edge(clk_in)) then
-          count <= count + 1; -- roll over after 11
-        else
-          count <= count;
-        end if;
-      end process;
+  SIGNAL count : STD_LOGIC_VECTOR (1 DOWNTO 0);
+
+BEGIN
+  PROCESS (clk_in, reset)
+  BEGIN
+    IF (reset = '1') THEN -- synchronous reset
+      count <= "00";
+    ELSIF (rising_edge(clk_in)) THEN
+      count <= count + 1; -- roll over after 11
+    ELSE
+      count <= count;
+    END IF;
+  END PROCESS;
 
   count_out <= count;
-  
-end Behavioral;
+
+END Behavioral;

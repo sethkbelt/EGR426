@@ -2,7 +2,10 @@
 -- Title: rps_rules.vhd
 -- Author: Seth Konynenbelt
 -- Created: January 20, 2023
--- Description: Main Rock Paper Scissors Logic
+-- Description: Main Rock Paper Scissors Logic. This logic block takes in both
+-- the computer and user choice. The switch_flag helps to count wins
+-- and losses. This block outputs ties, wins, losses, LED blinks, and also 
+-- supports lizard and spock choices.
 ----------------------------------------------------------------------------------
 
 LIBRARY IEEE;
@@ -19,7 +22,7 @@ ENTITY rps_rules IS
         switch_flag : IN STD_LOGIC;
         led0 : OUT STD_LOGIC;
         led1 : OUT STD_LOGIC;
-        win_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- TODO if >9
+        win_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
         tie_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
         loss_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END rps_rules;
@@ -34,7 +37,7 @@ ARCHITECTURE Behavioral OF rps_rules IS
 BEGIN
     PROCESS (switch_flag, clk, reset, user_rps, comp_rps)
     BEGIN
-        IF (reset = '1') THEN
+        IF (reset = '1') THEN --synchronous reset
             led1 <= '0';
             led0 <= '0';
             win_count_temp <= "0000";
@@ -43,6 +46,7 @@ BEGIN
             --ELSE
         ELSIF (rising_edge(clk)) THEN
             CASE user_rps IS
+                    ----------------------------------------------------------------------------------
                 WHEN "1010" => -- Rock choice
                     IF (comp_rps = "1010") THEN -- Rock_u ties rock_c
                         led1 <= '0';
@@ -89,7 +93,7 @@ BEGIN
                             tie_count_temp <= tie_count_temp;
                         END IF;
                     END IF;
-                    
+
                     ----------------------------------------------------------------------------------
                 WHEN "1011" => -- Paper choice
                     IF (comp_rps = "1010") THEN -- Paper_u beats rock_c
@@ -137,7 +141,7 @@ BEGIN
                             tie_count_temp <= tie_count_temp;
                         END IF;
                     END IF;
-                    
+
                     ----------------------------------------------------------------------------------
                 WHEN "1100" => -- Scissors choice
                     IF (comp_rps = "1010") THEN -- scissors_u loses rock_c
@@ -185,7 +189,7 @@ BEGIN
                             tie_count_temp <= tie_count_temp;
                         END IF;
                     END IF;
-                    
+
                     ----------------------------------------------------------------------------------
                 WHEN "1101" => -- Lizard choice
                     IF (comp_rps = "1010") THEN -- lizard_u loses rock_c
@@ -233,7 +237,7 @@ BEGIN
                             tie_count_temp <= tie_count_temp;
                         END IF;
                     END IF;
-                    
+
                     ----------------------------------------------------------------------------------
                 WHEN "1110" => -- Spock choice
                     IF (comp_rps = "1010") THEN -- spock_u beats rock_c
@@ -281,7 +285,7 @@ BEGIN
                             tie_count_temp <= tie_count_temp + 1;
                         END IF;
                     END IF;
-                    
+
                     ----------------------------------------------------------------------------------                    
                 WHEN "0000" => -- none on
                     led1 <= '0';

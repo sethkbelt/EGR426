@@ -1,8 +1,9 @@
 ----------------------------------------------------------------------------------
--- Title: Decoder_Two_To_Four.vhd
+-- Title: Computer_rps.vhd
 -- Author: Seth Konynenbelt
 -- Created: January 20, 2023
--- Description: Two to four decoder
+-- Description: Simulates the computer counting through r,p,s,l,s by 
+-- rotating through letters when user switch is 0.
 ----------------------------------------------------------------------------------
 
 LIBRARY IEEE;
@@ -28,9 +29,9 @@ BEGIN
   BEGIN
     IF (reset_main = '1') THEN
       rps_temp <= "1010";
-    ELSIF (switch = "00000") THEN -- uses switches for RPSLS input
-      IF (rising_edge(clk)) THEN -- only rotate computer when no button
-        IF (rps_temp = "1110") THEN --         IF (rps_temp = "1110") THEN
+    ELSIF (switch = "00000") THEN -- if switches aren't being used, turn on RPSLS roller
+      IF (rising_edge(clk)) THEN --  to only rotate computer when no switch is pressed
+        IF (rps_temp = "1110") THEN -- seven segment decoder r,p,s,l,c --> mapped to 10-14
           rps_temp <= "1010";
         ELSE
           rps_temp <= rps_temp + 1;

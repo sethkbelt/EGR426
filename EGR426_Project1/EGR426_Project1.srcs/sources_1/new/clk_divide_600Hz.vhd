@@ -1,8 +1,8 @@
 ----------------------------------------------------------------------------------
--- Title: Clock_Divider_OneKhz.vhd
+-- Title: Clock_Divider_380Hz.vhd
 -- Author: Seth Konynenbelt
 -- Created: January 20, 2023
--- Description: One khz clock divider
+-- Description: 380 Hz clock divider for debouncing switches
 ----------------------------------------------------------------------------------
 
 LIBRARY IEEE;
@@ -10,17 +10,17 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity Clock_Divider_380Hz is
-  port  (
+ENTITY Clock_Divider_380Hz IS
+  PORT (
     clk, reset : IN STD_LOGIC;
     clk_div : OUT STD_LOGIC);
-end Clock_Divider_380Hz;
+END Clock_Divider_380Hz;
 
-architecture Behavioral of Clock_Divider_380Hz is
+ARCHITECTURE Behavioral OF Clock_Divider_380Hz IS
 
   SIGNAL clk_temp : STD_LOGIC;
-  -- 16 bit vector holds value of 2^16, greater than 50,000
-  -- 100MHZ / 100,000 = 1Khz, divided by 2 to create clock of 50000
+  -- 17 bit vector holds value of 2^17, greater than 130,000
+  -- 100MHZ / 260,000 =~ 380hz, divided by 2 to create clock of 130,000
   SIGNAL count : STD_LOGIC_VECTOR (16 DOWNTO 0);
 
 BEGIN
