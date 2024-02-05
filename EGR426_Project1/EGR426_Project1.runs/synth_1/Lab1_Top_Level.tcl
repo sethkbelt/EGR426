@@ -105,6 +105,7 @@ read_vhdl -library xil_defaultlib {
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/main_rps.vhd
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/rps_rules.vhd
   /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd
+  /home/sethkonynenbelt/EGR426/EGR426_Project1/EGR426_Project1.srcs/sources_1/new/clk_divide_600Hz.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

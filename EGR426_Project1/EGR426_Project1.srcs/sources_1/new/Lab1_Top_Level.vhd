@@ -41,6 +41,14 @@ END Lab1_Top_Level;
       clk_div : OUT STD_LOGIC
     );
   END COMPONENT;
+   ---------------------------------------------------------------------------------- 
+    COMPONENT Clock_Divider_380Hz
+    PORT (
+      clk, reset : IN STD_LOGIC;
+      clk_div : OUT STD_LOGIC
+    );
+  END COMPONENT;
+  
   ----------------------------------------------------------------------------------
   COMPONENT Counter_Two_Bit
     PORT (
@@ -106,9 +114,16 @@ END Lab1_Top_Level;
         loss_count : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT;
-
-  ----------------------------------------------------------------------------------
-
+----------------------------------------------------------------------------------
+  COMPONENT debouncer IS
+    port (
+        btn_in  : in STD_LOGIC;
+        clk     : in STD_LOGIC;
+        reset   : in STD_LOGIC;
+        btn_out : out STD_LOGIC
+    );
+end COMPONENT;
+----------------------------------------------------------------------------------
   SIGNAL mux_out : STD_LOGIC_VECTOR (3 DOWNTO 0);
   SIGNAL two_bit_count : STD_LOGIC_VECTOR(1 DOWNTO 0);
   SIGNAL one_khz_clk : STD_LOGIC;
@@ -120,7 +135,7 @@ END Lab1_Top_Level;
   SIGNAL d1_segment_signal2 : STD_LOGIC_VECTOR(7 DOWNTO 0);
   SIGNAL d1_segment_signal3 : STD_LOGIC_VECTOR(7 DOWNTO 0);
   SIGNAL d1_segment_signal4 : STD_LOGIC_VECTOR(7 DOWNTO 0);
-  SIGNAL clk_125Hz : STD_LOGIC;
+  SIGNAL clk_125Hz, clk_600Hz : STD_LOGIC;
   SIGNAL in1, in2, in3 : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
   SIGNAL comp_rps : STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL user_rps : STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -128,20 +143,22 @@ END Lab1_Top_Level;
   SIGNAL tie_count : STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL loss_count : STD_LOGIC_VECTOR(3 DOWNTO 0);
   SIGNAL switch_flag : STD_LOGIC;
-
+  SIGNAL switches : STD_LOGIC_VECTOR(4 downto 0);
 BEGIN --using named port mapping, -- module => signal (top level)
 
   U2 : Clock_Divider_1Khz PORT MAP(clk => clk_100Mhz, reset => reset_main, clk_div => one_khz_clk);
   U3 : Clock_Divider_10Hz PORT MAP(clk => clk_100Mhz, reset => reset_main, clk_div => clk_125Hz);
+    U23 : Clock_Divider_380Hz PORT MAP(clk => clk_100Mhz, reset => reset_main, clk_div => clk_600Hz);
+
   U4 : Counter_Two_Bit PORT MAP(clk_in => one_khz_clk, reset => reset_main, count_out => two_bit_count);
-  U5 : computer_rps PORT MAP(clk => clk_125Hz, reset_main => reset_main, switch => sw, rps => comp_rps);
+  U5 : computer_rps PORT MAP(clk => clk_125Hz, reset_main => reset_main, switch => switches, rps => comp_rps);
   U6 : Decoder_Seven_Segment PORT MAP(bcd => comp_rps, seg_out => d0_segment_signal1);
   U7 : Decoder_Seven_Segment PORT MAP(bcd => "1111", seg_out => d0_segment_signal2);
   U8 : Decoder_Seven_Segment PORT MAP(bcd => "1111", seg_out => d0_segment_signal3);
   U9 : Decoder_Seven_Segment PORT MAP(bcd => "1111", seg_out => d0_segment_signal4);
  
   U10 : big_mux PORT MAP(seg1 => d0_segment_signal1, seg2 => d0_segment_signal2, seg3 => d0_segment_signal3, seg4 => d0_segment_signal4, sel => two_bit_count, seg_out => D0_SEG, anode_out => D0_AN);
-  U11 : main_rps PORT MAP(clk => clk_100Mhz, reset_main => reset_main, switch => sw, switch_flag => switch_flag, user_rps => user_rps);
+  U11 : main_rps PORT MAP(clk => clk_100Mhz, reset_main => reset_main, switch => switches, switch_flag => switch_flag, user_rps => user_rps);
   U12 : rps_rules PORT MAP(reset => reset_main, clk => clk_100Mhz, user_rps => user_rps, comp_rps => comp_rps, switch_flag => switch_flag, led0 => led(0), led1 => led(1), win_count => win_count, tie_count => tie_count, loss_count => loss_count);
 
   U13 : Decoder_Seven_Segment_AF PORT MAP(bcd => win_count, seg_out => d1_segment_signal1);
@@ -150,7 +167,10 @@ BEGIN --using named port mapping, -- module => signal (top level)
   U16 : Decoder_Seven_Segment PORT MAP(bcd => user_rps, seg_out => d1_segment_signal4);
   U17 : big_mux PORT MAP(seg1 => d1_segment_signal1, seg2 => d1_segment_signal2, seg3 => d1_segment_signal3, seg4 => d1_segment_signal4, sel => two_bit_count, seg_out => D1_SEG, anode_out => D1_AN);
 
-
-
+   U18 : debouncer PORT MAP ( btn_in => sw(0), clk => clk_600Hz, reset => reset_main , btn_out => switches(0));
+   U19 : debouncer PORT MAP ( btn_in => sw(1), clk => clk_600Hz, reset => reset_main , btn_out => switches(1));
+   U20 : debouncer PORT MAP ( btn_in => sw(2), clk => clk_600Hz, reset => reset_main , btn_out => switches(2));
+   U21 : debouncer PORT MAP ( btn_in => sw(3), clk => clk_600Hz, reset => reset_main , btn_out => switches(3));
+   U22 : debouncer PORT MAP ( btn_in => sw(4), clk => clk_600Hz, reset => reset_main , btn_out => switches(4));
 
 END Structural;
