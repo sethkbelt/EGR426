@@ -1,90 +1,88 @@
 ----------------------------------------------------------------------------------
- -- Title: Deocder_Seven_Segment_tb.vhd
- -- Author: Seth Konynenbelt
- -- Created: January 20, 2023
- -- Description: Deocder for 7 segment test bench
+-- Title: Deocder_Seven_Segment_tb.vhd
+-- Author: Seth Konynenbelt
+-- Created: January 20, 2023
+-- Description: Deocder for 7 segment test bench
 ----------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use std.textio.all;
-use ieee.std_logic_textio.all;
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE std.textio.ALL;
+USE ieee.std_logic_textio.ALL;
 
+ENTITY Decoder_Seven_Segment_tb IS
+END Decoder_Seven_Segment_tb;
 
-entity Decoder_Seven_Segment_tb is
-end Decoder_Seven_Segment_tb;
+ARCHITECTURE Behavioral OF Decoder_Seven_Segment_tb IS
 
-architecture Behavioral of Decoder_Seven_Segment_tb is
+  ----------------------------------------------------------------------------------
+  COMPONENT Decoder_Seven_Segment IS
+    PORT (
+      bcd : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      seg_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+  END COMPONENT;
+  ----------------------------------------------------------------------------------
 
-----------------------------------------------------------------------------------
-component Decoder_Seven_Segment is
-    port(
-        bcd: in std_logic_vector(3 downto 0);
-        seg_out: out std_logic_vector(7 downto 0));
-end component;
-----------------------------------------------------------------------------------
-
-signal bcd : std_logic_vector(3 downto 0) := "0000"; -- initialize inputs
-signal seg_out:  std_logic_vector(7 downto 0);
-
-
-PROCEDURE Monitor(ShouldBe: in STD_LOGIC_vector(7 downto 0)) is
-  VARIABLE lout : line;
-  begin
+  SIGNAL bcd : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000"; -- initialize inputs
+  SIGNAL seg_out : STD_LOGIC_VECTOR(7 DOWNTO 0);
+  
+  PROCEDURE Monitor(ShouldBe : IN STD_LOGIC_VECTOR(7 DOWNTO 0)) IS
+    VARIABLE lout : line;
+  BEGIN
     WRITE(lout, NOW, right, 10, ns);
-    WRITE(lout, string'(" | bcd -->"));
+    WRITE(lout, STRING'(" | bcd -->"));
     WRITE(lout, bcd);
-   
-    WRITE(lout, string'(" | Expected seg_out--> "));
-    WRITE(lout, ShouldBe); 
-    
-    WRITE(lout, string'(" | Actual seg_out --> "));
+
+    WRITE(lout, STRING'(" | Expected seg_out--> "));
+    WRITE(lout, ShouldBe);
+
+    WRITE(lout, STRING'(" | Actual seg_out --> "));
     WRITE(lout, seg_out);
-    
+
     WRITELINE(OUTPUT, lout);
-    
+
     ASSERT seg_out = ShouldBe REPORT "Test Failed" SEVERITY FAILURE;
-  end Monitor;
+  END Monitor;
 
-begin
-    T1: Decoder_Seven_Segment port map (bcd => bcd, seg_out => seg_out); -- connect ports
- 
-  process
-    begin
-      wait for 100 ns; 
-      -- loop
-        Monitor("11000000");
-        bcd <= bcd + 1;
-        wait for 10ns;
-        Monitor("11111001");
+BEGIN
+  T1 : Decoder_Seven_Segment PORT MAP(bcd => bcd, seg_out => seg_out); -- connect ports
 
-        bcd <= bcd + 3;
-        wait for 10ns;
-        Monitor("10011001");
+  PROCESS
+  BEGIN
+    WAIT FOR 100 ns;
+    -- loop
+    Monitor("11000000");
+    bcd <= bcd + 1;
+    WAIT FOR 10ns;
+    Monitor("11111001");
 
-        bcd <= bcd + 1;
-        wait for 10ns;
-        Monitor("10010010");
+    bcd <= bcd + 3;
+    WAIT FOR 10ns;
+    Monitor("10011001");
 
-        bcd <= bcd + 4;
-        wait for 10ns;
-        Monitor("10010000");
+    bcd <= bcd + 1;
+    WAIT FOR 10ns;
+    Monitor("10010010");
 
-        bcd <= bcd + 6;
-        wait for 10ns;
-        Monitor("11111111");
+    bcd <= bcd + 4;
+    WAIT FOR 10ns;
+    Monitor("10010000");
 
-        bcd <= bcd + 16; -- rollover occurs
-        wait for 10ns;
-        Monitor("10111111");
+    bcd <= bcd + 6;
+    WAIT FOR 10ns;
+    Monitor("11111111");
 
-        bcd <= bcd + 1; -- expected fail
-        wait for 10ns;
-        Monitor("10100100");
+    bcd <= bcd + 16; -- rollover occurs
+    WAIT FOR 10ns;
+    Monitor("10111111");
 
-      -- end loop;
-    end process;
-    
-end Behavioral;
+    bcd <= bcd + 1; -- expected fail
+    WAIT FOR 10ns;
+    Monitor("10100100");
+
+    -- end loop;
+  END PROCESS;
+
+END Behavioral;

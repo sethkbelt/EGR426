@@ -165,9 +165,9 @@ BEGIN
   U5 : computer_rps PORT MAP(clk => clk_125Hz, reset_main => reset_main, switch => switches, rps => comp_rps);
 
   -- second sevent segment control
-  U13 : Decoder_Seven_Segment_AF PORT MAP(bcd => win_count, seg_out => d1_segment_signal1);
+  U13 : Decoder_Seven_Segment_AF PORT MAP(bcd => loss_count, seg_out => d1_segment_signal1);
   U14 : Decoder_Seven_Segment_AF PORT MAP(bcd => tie_count, seg_out => d1_segment_signal2);
-  U15 : Decoder_Seven_Segment_AF PORT MAP(bcd => loss_count, seg_out => d1_segment_signal3);
+  U15 : Decoder_Seven_Segment_AF PORT MAP(bcd => win_count, seg_out => d1_segment_signal3);
   U16 : Decoder_Seven_Segment PORT MAP(bcd => user_rps, seg_out => d1_segment_signal4);
   U17 : big_mux PORT MAP(seg1 => d1_segment_signal1, seg2 => d1_segment_signal2, seg3 => d1_segment_signal3, seg4 => d1_segment_signal4, sel => two_bit_count, seg_out => D1_SEG, anode_out => D1_AN);
 

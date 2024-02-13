@@ -1,0 +1,1 @@
+--debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "big_mux_tb_behav" "xil_defaultlib.big_mux_tb" -log "elaborate.log" 

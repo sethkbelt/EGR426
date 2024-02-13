@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Mon Feb  5 14:55:48 2024
+| Date         : Wed Feb  7 08:42:38 2024
 | Host         : ubuntu running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_control_sets -verbose -file Lab1_Top_Level_control_sets_placed.rpt
 | Design       : Lab1_Top_Level
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | No                     |               5 |            2 |
 | No           | No                    | Yes                    |              76 |           22 |
 | No           | Yes                   | No                     |               4 |            2 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              18 |            6 |
+| Yes          | No                    | Yes                    |              18 |            7 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,18 +70,18 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+--------------------------+------------------+------------------+----------------+--------------+
-|      Clock Signal     |       Enable Signal      | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------+--------------------------+------------------+------------------+----------------+--------------+
-|  U2/CLK               |                          | reset_main_IBUF  |                1 |              2 |         2.00 |
-|  clk_100Mhz_IBUF_BUFG | U11/user_rps_reg[2]_0    | reset_main_IBUF  |                1 |              2 |         2.00 |
-|  U3/CLK               | U18/E[0]                 | reset_main_IBUF  |                1 |              4 |         4.00 |
-|  clk_100Mhz_IBUF_BUFG | U5/E[0]                  | reset_main_IBUF  |                1 |              4 |         4.00 |
-|  clk_100Mhz_IBUF_BUFG | U11/E[0]                 | reset_main_IBUF  |                2 |              4 |         2.00 |
-|  clk_100Mhz_IBUF_BUFG | U11/user_rps_reg[1]_0[0] | reset_main_IBUF  |                1 |              4 |         4.00 |
-|  clk_100Mhz_IBUF_BUFG |                          |                  |                3 |              5 |         1.67 |
-|  U23/clk_temp_reg_0   |                          | reset_main_IBUF  |                3 |             15 |         5.00 |
-|  clk_100Mhz_IBUF_BUFG |                          | reset_main_IBUF  |               20 |             63 |         3.15 |
-+-----------------------+--------------------------+------------------+------------------+----------------+--------------+
++-----------------------+-----------------------+------------------+------------------+----------------+--------------+
+|      Clock Signal     |     Enable Signal     | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-----------------------+------------------+------------------+----------------+--------------+
+|  U2/CLK               |                       | reset_main_IBUF  |                1 |              2 |         2.00 |
+|  clk_100Mhz_IBUF_BUFG | U5/rps_temp_reg[3]_0  | reset_main_IBUF  |                2 |              2 |         1.00 |
+|  clk_100Mhz_IBUF_BUFG | U11/E[0]              | reset_main_IBUF  |                1 |              4 |         4.00 |
+|  clk_100Mhz_IBUF_BUFG | U5/E[0]               | reset_main_IBUF  |                1 |              4 |         4.00 |
+|  clk_100Mhz_IBUF_BUFG | U5/user_rps_reg[1][0] | reset_main_IBUF  |                2 |              4 |         2.00 |
+|  U3/CLK               | U21/E[0]              | reset_main_IBUF  |                1 |              4 |         4.00 |
+|  clk_100Mhz_IBUF_BUFG |                       |                  |                2 |              5 |         2.50 |
+|  U23/clk_temp_reg_0   |                       | reset_main_IBUF  |                3 |             15 |         5.00 |
+|  clk_100Mhz_IBUF_BUFG |                       | reset_main_IBUF  |               20 |             63 |         3.15 |
++-----------------------+-----------------------+------------------+------------------+----------------+--------------+
 
 

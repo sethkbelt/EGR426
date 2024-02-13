@@ -43,7 +43,7 @@ BEGIN
             win_count_temp <= "0000";
             loss_count_temp <= "0000";
             tie_count_temp <= "0000";
-            --ELSE
+
         ELSIF (rising_edge(clk)) THEN
             CASE user_rps IS
                     ----------------------------------------------------------------------------------

@@ -13,6 +13,8 @@ vhdl xil_defaultlib  \
 "../../../../EGR426_Project1.srcs/sources_1/new/big_mux.vhd" \
 "../../../../EGR426_Project1.srcs/sources_1/new/main_rps.vhd" \
 "../../../../EGR426_Project1.srcs/sources_1/new/rps_rules.vhd" \
+"../../../../EGR426_Project1.srcs/sources_1/new/Decoder_AF.vhd" \
+"../../../../EGR426_Project1.srcs/sources_1/new/clk_divide_600Hz.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/Lab1_Top_Level_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/rps_input_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/Mux_Four_To_One_tb.vhd" \
@@ -23,6 +25,7 @@ vhdl xil_defaultlib  \
 "../../../../EGR426_Project1.srcs/sim_1/new/debouncer_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/rps_rules_tb.vhd" \
 "../../../../EGR426_Project1.srcs/sim_1/new/main_rps_tb.vhd" \
+"../../../../EGR426_Project1.srcs/sim_1/new/comp_rps_tb.vhd" \
 
 # Do not sort compile order
 nosort
